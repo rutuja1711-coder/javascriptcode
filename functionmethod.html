@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.Call method
+
+        // const person = {
+
+        //     fullname: function() {
+        //         return this.firstname + this.lastname
+        //     }
+        // }
+        // const person2 = {
+        //     firstname: "John",
+        //     lastname: "Willium",
+
+        // }
+        // const person3 = {
+        //     firstname: "Max",
+        //     lastname: "Robbert",
+        // }
+        // document.write(person.fullname.call(person2))
+
+        // 2.Apply Method
+        // const person = {
+
+        //     fullname: function(city, country) {
+        //         return this.firstname + " " + this.lastname + " " + city + " " + country
+        //     }
+        // }
+        // const person2 = {
+        //     firstname: "John",
+        //     lastname: "Willium",
+
+        // }
+        // const person3 = {
+        //     firstname: "Max",
+        //     lastname: "Robbert",
+        // }
+        // document.write(person.fullname.apply(person2, ["pune", "India"]))
+
+        // 3.Bind Method
+
+        const person = {
+            firstname: "John",
+            lastname: "Willium",
+            fullname: function() {
+                return this.firstname + " " + this.lastname
+            }
+        }
+        const member = {
+            firstname: "Max",
+            lastname: "Robbert",
+        }
+        let fullname = person.fullname.bind(member)
+        document.write(fullname())
+    </script>
+
+</body>
+
+</html>
