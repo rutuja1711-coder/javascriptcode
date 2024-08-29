@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: black;
+            color: white;
+            width: 300px;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div> <button onclick="red()" class="black red">Click to Chnage Red color</button><br><br>
+        <button onclick="blue()" class="blue red">Click to Chnage Blue color</button><br><br>
+        <button onclick="black()">Change all the Initial state</button></div><br>
+    <script>
+        function red() {
+            document.getElementsByClassName("red")[0].style.backgroundColor = "red"
+        }
+
+        function blue() {
+            document.getElementsByClassName("blue")[0].style.backgroundColor = "blue"
+        }
+
+        function black() {
+            let element = document.getElementsByClassName("black")
+            for (var i = 0; i < element.lenght; i++) {
+                element[i].style.backgroundColor = 'black';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

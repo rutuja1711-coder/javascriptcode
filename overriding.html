@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. the javascript predefined methods
+        // function alert() {
+        //     console.log("This is overridden function")
+        // }
+        // alert()
+        // 2. User defined function
+        // function sum(a, b, c) {
+        //     return a + b + c
+        // }
+
+        // function sum(a, b) {
+        //     return a + b
+        // }
+        // console.log(sum(5, 10, 5));
+
+        // 3. parent class function / method
+        class Calculator {
+            calc() {
+                document.write("Lets Override")
+            }
+
+        }
+        class square extends Calculator {
+            calc(x) {
+                document.write(x * x)
+            }
+        }
+        var sq = new square()
+        sq.calc(10)
+    </script>
+
+</body>
+
+</html>

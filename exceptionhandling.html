@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p id="demo"></p> -->
+    <script>
+        // try {
+        //     alert("Welcome Guest....!")
+        // } catch (error) {
+        //     document.getElementById("demo").innerHTML = error.message
+        // }
+
+        // throw statements
+
+        function myfunc() {
+            var a = 100
+            var b = 0
+            try {
+                if (b == 0) {
+                    throw ("Divide by Zero Error")
+                } else {
+                    var c = a / b;
+                    document.write(c)
+                }
+            } catch (error) {
+                document.write(error)
+            }
+        }
+        myfunc();
+    </script>
+
+</body>
+
+</html>
